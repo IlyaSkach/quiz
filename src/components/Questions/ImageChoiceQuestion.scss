@@ -1,0 +1,62 @@
+.image-choice-question {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 20px;
+
+  &__text {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+    color: #fff;
+  }
+
+  &__options {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+  }
+
+  &__option {
+    width: 150px;
+    height: 150px;
+    background-size: cover;
+    background-position: center;
+    border: 3px solid transparent;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: transform 0.3s ease, border 0.3s ease;
+
+    &:hover {
+      transform: scale(1.05);
+    }
+
+    &.selected {
+      border-color: #4caf50;
+      transform: scale(1.1);
+    }
+  }
+
+  @media (max-width: 991px) {
+    &__option {
+      width: 120px;
+      height: 120px;
+    }
+  }
+
+  @media (max-width: 767px) {
+    &__option {
+      width: 100px;
+      height: 100px;
+    }
+  }
+
+  @media (max-width: 478px) {
+    &__option {
+      width: 80px;
+      height: 80px;
+    }
+  }
+}
+
