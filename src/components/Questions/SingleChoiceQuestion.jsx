@@ -9,7 +9,7 @@ const SingleChoiceQuestion = ({ question, onAnswer }) => {
       <div className="optionssg">
         {question.options.map((option, index) => (
           <div key={index} className="optionsg" onClick={() => onAnswer(index)}>
-            <div className="circle">{index + 1}</div>
+            <div className="circlesg">{index + 1}</div>
             {option}
           </div>
         ))}

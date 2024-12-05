@@ -1,30 +1,91 @@
 .question.single-choice {
+  max-width: 330px;
+  margin: 0 auto;
+
+  .title {
+    font-family: "Montserrat", sans-serif;
+    font-weight: 700;
+    font-size: 29px;
+    line-height: 141%;
+    color: #fff;
+    width: 330px;
+    margin: 0 auto;
+    text-align: left;
+    margin-bottom: 30px;
+  }
+
+  .text {
+    color: rgb(255, 255, 255);
+
+    font-size: 17px;
+    font-weight: 500;
+    line-height: 21px;
+    letter-spacing: 0%;
+    text-align: left;
+  }
+
   .question-image {
-    margin-bottom: 20px;
+    margin-bottom: 60px;
 
     img {
-      max-width: 15%;
-      height: auto;
-      border-radius: 8px;
+      width: 186px;
+      height: 176px;
+      border-radius: 50px;
     }
   }
 
-  .options {
+  .circle {
     display: flex;
-    flex-direction: column;
-    gap: 10px;
+    align-items: center;
+    justify-content: space-around;
+    width: 40px;
+    height: 40px;
+    border-radius: 100%;
+    background: #11cccc;
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 24px;
+    color: #fff;
+    margin-right: 20px;
   }
 
-  .option {
-    padding: 10px;
-    background-color: #f0f0f0;
-    border: 1px solid #ccc;
-    border-radius: 4px;
+  .optionsim {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .optionim {
+    // padding: 10px;
+    // background-color: #f0f0f0;
+    // border: 1px solid #ccc;
+    // border-radius: 4px;
+    // cursor: pointer;
+    // transition: background-color 0.3s;
+
+    // &:hover {
+    //   background-color: #e0e0e0;
+    // }
+    font-family: var(--font-family);
+    font-weight: 500;
+    font-size: 17px;
+    line-height: 127%;
+    color: #272727;
+    // width: 100%;
+    color: #000;
+    display: flex;
+    align-items: center;
+    text-align: left;
+    padding: 15px 20px;
+    border: 2px solid #ccc;
+    border-radius: 20px;
+    background: #ffffff;
     cursor: pointer;
-    transition: background-color 0.3s;
+    transition: background 0.3s ease, transform 0.2s ease;
 
     &:hover {
-      background-color: #e0e0e0;
+      background: #e0f7fa;
+      transform: scale(1.05);
     }
   }
 }

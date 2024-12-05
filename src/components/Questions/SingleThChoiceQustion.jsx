@@ -6,10 +6,12 @@ const SingleThChoiceQuestion = ({ question, onAnswer }) => {
 
   return (
     <div className="question single-choice">
-      <h2>{question.text}</h2>
-      <div className="options">
+      <h2 className="title">{question.text}</h2>
+      <p className="text">Выберите вариант:</p>
+      <div className="optionstd">
         {question.options.map((option, index) => (
-          <button key={index} className="option" onClick={() => onAnswer(question.id, index)}>
+          <button key={index} className="optiontd" onClick={() => onAnswer(question.id, index)}>
+               <div className="circle">{index + 1}</div>
             {option}
           </button>
         ))}
