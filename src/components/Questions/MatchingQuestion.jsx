@@ -4,8 +4,8 @@ import "./MatchingQuestion.scss";
 const MatchQuestion = ({ question = {}, onAnswer = () => {} }) => {
   console.log("Rendering MatchQuestion with question:", question);
 
-  const [topItems, setTopItems] = useState(question.pairs.top || []);
-  const [bottomItems, setBottomItems] = useState(question.pairs.bottom || []);
+  const [topItems] = useState(question.pairs.top || []);
+  const [bottomItems] = useState(question.pairs.bottom || []);
   const [selectedTop, setSelectedTop] = useState(null);
   const [selectedPairs, setSelectedPairs] = useState({});
 
