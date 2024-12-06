@@ -20,7 +20,7 @@ $result-dark: #2b0058;
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-bottom: 1.5rem;
+  margin-bottom: 1rem;
   padding-top: 10px;
 }
 
@@ -38,7 +38,7 @@ $result-dark: #2b0058;
     flex-direction: column;
     align-items: center;
     margin-bottom: 1.5rem;
-    margin-top: 60px;
+    margin-top: 20px;
 
     &__title {
       font-size: 1.2rem;
@@ -60,7 +60,7 @@ $result-dark: #2b0058;
     height: auto;
     box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
     background: #dff4fa;
-    margin-bottom: 30px; /* Добавляем отступ снизу */
+    margin-bottom: 20px; /* Добавляем отступ снизу */
 
     &__trophy {
       font-size: 6rem;

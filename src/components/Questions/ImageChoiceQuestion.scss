@@ -24,7 +24,7 @@
     justify-content: center;
     gap: 48px;
     flex-wrap: wrap;
-    margin-bottom: 20px; /* Отступ снизу для лучшего расположения */
+    margin-bottom: 10px; /* Отступ снизу для лучшего расположения */
     flex-grow: 1; /* Позволяет этому блоку растягиваться */
   }
 
@@ -48,25 +48,25 @@
     }
   }
 
-  @media (max-width: 991px) {
-    &__optioni {
-      width: 150px; /* Увеличиваем размер, если нужно, для меньших экранов */
-      height: 150px;
-    }
-  }
+  // @media (max-width: 991px) {
+  //   &__optioni {
+  //     width: 150px; /* Увеличиваем размер, если нужно, для меньших экранов */
+  //     height: 150px;
+  //   }
+  // }
 
-  @media (max-width: 767px) {
-    &__optioni {
-      width: 120px;
-      height: 120px;
-    }
-  }
+  // @media (max-width: 767px) {
+  //   &__optioni {
+  //     width: 120px;
+  //     height: 120px;
+  //   }
+  // }
 
-  @media (max-width: 478px) {
-    &__optioni {
-      width: 100px;
-      height: 100px;
-    }
-  }
+  // @media (max-width: 478px) {
+  //   &__optioni {
+  //     width: 100px;
+  //     height: 100px;
+  //   }
+  // }
 }
 
