@@ -2,26 +2,31 @@
   position: relative;
   width: 100%;
   height: 100vh;
-  overflow: hidden; // Скрываем все, что выходит за пределы экрана
 
   .background-video {
-    position: absolute;
+    position: fixed; /* Видео фиксируется на экране */
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    object-fit: cover; // Масштабируем видео для заполнения экрана
-    z-index: -1; // Перемещаем видео на задний план
+    object-fit: cover; /* Масштабируем видео для заполнения экрана */
+    z-index: -1; /* Перемещаем видео на задний план */
   }
 
   .quiz-container {
     position: relative;
-    z-index: 1; // Поверх видео
-    max-width: 600px;
+    z-index: 1; /* Элементы поверх видео */
+    max-width: 330px;
     margin: 0 auto;
     text-align: center;
     color: #fff;
     font-family: 'Montserrat';
+    height: 100%; /* Растягиваем контейнер на высоту экрана */
+    display: flex; /* Центрируем содержимое */
+    flex-direction: column;
+    justify-content: center; /* Центрируем вертикально */
+    align-items: center; /* Центрируем горизонтально */
   }
 }
+
 

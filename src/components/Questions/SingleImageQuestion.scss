@@ -1,87 +1,86 @@
 .question.single-choice {
-  max-width: 330px;
-  margin: 0 auto;
-  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; /* Равномерно распределяем элементы */
+  align-items: center;
+  height: 100vh; /* Занимаем всю высоту экрана */
+  padding: 0 20px; /* Добавляем отступы для мобильных устройств */
+  box-sizing: border-box; /* Учитываем отступы в расчет размеров */
+  overflow: hidden; /* Скрываем все, что выходит за пределы экрана */
+}
 
-  .title {
-    font-family: "Montserrat", sans-serif;
-    font-weight: 700;
-    font-size: 29px;
-    line-height: 141%;
-    color: #fff;
-    width: 330px;
-    margin: 0 auto;
-    text-align: left;
-    margin-bottom: 30px;
+.title {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+  font-size: 29px;
+  line-height: 141%;
+  color: #fff;
+  width: 100%; /* Убираем фиксированную ширину */
+  text-align: left;
+  margin-bottom: 20px;
+}
+
+.text {
+  color: rgb(255, 255, 255);
+  font-size: 17px;
+  font-weight: 500;
+  line-height: 21px;
+  letter-spacing: 0%;
+  text-align: left;
+  margin-bottom: 20px; /* Отступ снизу */
+}
+
+.question-image {
+  margin-bottom: 20px; /* Уменьшаем отступ для изображения */
+  img {
+    width: 186px;
+    height: 176px;
+    border-radius: 50px;
   }
+}
 
-  .text {
-    color: rgb(255, 255, 255);
+.circle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 100%;
+  background: #11cccc;
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 24px;
+  color: #fff;
+  margin-right: 20px;
+  flex-shrink: 0; /* Предотвращает сжатие круга */
+}
 
-    font-size: 17px;
-    font-weight: 500;
-    line-height: 21px;
-    letter-spacing: 0%;
-    text-align: left;
-  }
+.optionsim {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  width: 100%; /* Заполняем доступную ширину */
+}
 
-  .question-image {
-    margin-bottom: 60px;
-
-    img {
-      width: 186px;
-      height: 176px;
-      border-radius: 50px;
-    }
-  }
-
-  .circle {
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
-    width: 40px;
-    height: 40px;
-    border-radius: 100%;
-    background: #11cccc;
-    font-size: 20px;
-    font-weight: 700;
-    line-height: 24px;
-    color: #fff;
-    margin-right: 20px;
-    flex-shrink: 0; /* Предотвращает сжатие круга */
-  }
-
-  .optionsim {
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
-  }
-
-  .optionim {
- 
-    font-family: var(--font-family);
-    font-weight: 500;
-    font-size: 17px;
-    line-height: 127%;
-    color: #272727;
-    color: #000;
-    display: flex;
-    align-items: center;
-    text-align: left;
-    padding: 15px 20px;
-    border: 2px solid #ccc;
-    border-radius: 20px;
-    background: #ffffff;
-    cursor: pointer;
-    transition: background 0.3s ease, transform 0.2s ease;
-
-    // max-width: 300px; /* Укажите вашу желаемую ширину */
-    // overflow: hidden;
-    // white-space: nowrap; /* Для однострочного текста */
-
-    &:hover {
-      background: #e0f7fa;
-      transform: scale(1.05);
-    }
+.optionim {
+  font-family: var(--font-family);
+  font-weight: 500;
+  font-size: 17px;
+  line-height: 127%;
+  color: #272727;
+  background: #ffffff;
+  border: 2px solid #ccc;
+  border-radius: 20px;
+  padding: 15px 20px;
+  text-align: left;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.2s ease;
+  max-width: 100%; /* Убираем ограничение по ширине */
+  
+  &:hover {
+    background: #e0f7fa;
+    transform: scale(1.05);
   }
 }

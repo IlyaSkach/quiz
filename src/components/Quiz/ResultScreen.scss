@@ -8,7 +8,12 @@ $result-dark: #2b0058;
   margin: 0 auto;
   color: $result-light;
   font-family: "Montserrat", sans-serif;
-  min-height: 100vh;
+  height: 100vh; /* Устанавливаем высоту контейнера в 100% экрана */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between; /* Равномерно распределяем пространство */
+  overflow: hidden; /* Убираем прокрутку */
 }
 
 .header-result {
@@ -16,18 +21,17 @@ $result-dark: #2b0058;
   flex-direction: column;
   align-items: center;
   margin-bottom: 1.5rem;
-  padding-top: 60px;
+  padding-top: 10px;
 }
-
-
 
 .result-screen {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: space-between;
-
-  // background: $result-bg-gradient;
+  justify-content: center; /* Центрируем все элементы по вертикали */
+  flex-grow: 1; /* Позволяет растянуть контейнер по высоте */
+  width: 100%; /* Занимаем всю ширину */
+  box-sizing: border-box; /* Чтобы padding и border не увеличивали размеры */
 
   &__header {
     display: flex;
@@ -51,10 +55,12 @@ $result-dark: #2b0058;
     text-align: center;
     border-radius: 30px;
     padding: 43px 0px;
-    width: 331px;
-    height: 448px;
+    width: 100%;
+    max-width: 330px; /* Максимальная ширина */
+    height: auto;
     box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
     background: #dff4fa;
+    margin-bottom: 30px; /* Добавляем отступ снизу */
 
     &__trophy {
       font-size: 6rem;
@@ -62,10 +68,6 @@ $result-dark: #2b0058;
     }
 
     &__score {
-      // font-size: 2.5rem;
-      // font-weight: bold;
-      // color: $result-light;
-      // margin: 0.5rem 0;
       font-family: var(--second-family);
       font-weight: 700;
       font-size: 48px;
@@ -92,12 +94,12 @@ $result-dark: #2b0058;
   }
 
   &__footer {
-    // display: flex;
-    // gap: 1rem;
-    // margin-top: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 
     &__button {
-   
+      margin-top: 20px;
 
       &--share {
         background-color: #0088cc;
@@ -126,42 +128,38 @@ $result-dark: #2b0058;
 
 .score {
   font-family: var(--second-family);
-font-weight: 700;
-font-size: 48px;
-text-align: center;
-color: #1cc;
-margin: 0;
+  font-weight: 700;
+  font-size: 48px;
+  text-align: center;
+  color: #1cc;
+  margin: 0;
 }
+
 .message {
   font-family: var(--font-family);
-font-weight: 700;
-font-size: 21px;
-text-align: center;
-color: #353535;
+  font-weight: 700;
+  font-size: 21px;
+  text-align: center;
+  color: #353535;
 }
 
 .highlight {
   font-family: var(--third-family);
-font-weight: 700;
-font-size: 50px;
-text-align: center;
-color: #1cc;
+  font-weight: 700;
+  font-size: 50px;
+  text-align: center;
+  color: #1cc;
 }
+
 .stat {
   font-family: var(--font-family);
-font-weight: 500;
-font-size: 17px;
-text-align: center;
-color: #353535;
+  font-weight: 500;
+  font-size: 17px;
+  text-align: center;
+  color: #353535;
 }
 
 .submit-button {
-  // margin-top: 20px;
-  // padding: 10px 20px;
-  // background: #4caf50;
-  // color: #fff;
-  // border: none;
-  // border-radius: 5px;
   font-family: var(--font-family);
   font-weight: 500;
   font-size: 17px;
@@ -172,14 +170,15 @@ color: #353535;
   box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
   background: #fff;
   cursor: pointer;
- margin: 30px auto;
- display: flex;
- align-items: center;
- justify-content: center;
- gap: 20px;
+  margin: 10px auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
   transition: background 0.3s ease;
 
   &:hover {
     background: #1cc;
   }
 }
+

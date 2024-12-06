@@ -1,34 +1,41 @@
 .match-question {
-  max-width: 330px;
-  margin: 0 auto;
-  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; /* Равномерное распределение элементов */
+  align-items: center;
+  height: 100vh; /* Занимаем всю высоту экрана */
+  padding: 0 20px; /* Отступы для мобильных устройств */
+  box-sizing: border-box; /* Учитываем отступы в расчет размеров */
+
   .match-question__text {
     font-family: "Montserrat", sans-serif;
     font-weight: 700;
-    font-size: 29px;
-    line-height: 141%;
+    font-size: 29px; /* Оставляем размер шрифта */
+    line-height: 141%; /* Оставляем интервал */
     color: #fff;
-    width: 330px;
-    margin: 0 auto;
-    text-align: left;
-    margin-bottom: 87px;
+    width: 100%;
+    text-align: center;
+    margin-bottom: 20px; /* Отступ снизу */
   }
 
   .match-question__lists {
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
-    margin-bottom: 20px;
+    align-items: center;
+    width: 100%; /* Занимаем всю ширину */
+    flex-grow: 1; /* Это позволяет элементам занимать оставшееся пространство */
+    justify-content: space-evenly; /* Распределяем элементы равномерно по вертикали */
   }
 
   .match-question__list {
     display: flex;
-    flex-wrap: wrap; /* Позволяет элементам переходить на новую строку */
+    flex-wrap: wrap;
     gap: 20px;
+    justify-content: center;
     list-style: none;
-    max-width: 330px; /* Максимальная ширина */
     padding: 0;
     margin: 0;
+    width: 100%;
   }
 
   .match-question__item {
@@ -39,13 +46,10 @@
     font-family: var(--font-family);
     font-weight: 500;
     font-size: 17px;
-    text-align: center;
     color: #272727;
     white-space: nowrap;
     cursor: pointer;
-    transition:
-      background-color 0.3s,
-      border-color 0.3s;
+    transition: background-color 0.3s, border-color 0.3s;
 
     &.selected {
       background-color: #1cc;
@@ -59,18 +63,10 @@
   }
 
   .svg {
-    margin: 30px auto;
+    margin: 20px auto;
   }
 
   .submit-button {
-    // padding: 10px 20px;
-    // font-size: 16px;
-    // border: none;
-    // border-radius: 4px;
-    // background-color: #007bff;
-    // color: #fff;
-    // cursor: pointer;
-    // transition: background-color 0.3s;
     font-family: var(--font-family);
     font-weight: 500;
     font-size: 24px;
@@ -81,7 +77,8 @@
     box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
     background: #fff;
     cursor: pointer;
-    margin: 100px auto;
+    margin-top: 20px;
+    max-width: 300px; /* Ограничиваем ширину кнопки */
     display: flex;
     align-items: center;
     justify-content: center;
@@ -98,3 +95,4 @@
     }
   }
 }
+

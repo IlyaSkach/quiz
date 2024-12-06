@@ -1,11 +1,10 @@
 .image-choice-question {
-  max-width: 330px;
-  margin: 0 auto;
   display: flex;
   flex-direction: column;
   align-items: center;
   text-align: center;
-  height: 100vh;
+  height: 100vh; /* Устанавливаем высоту контейнера на 100% экрана */
+  overflow: hidden; /* Убираем скроллинг, если элементы выходят за пределы */
 
   &__text {
     font-family: "Montserrat", sans-serif;
@@ -16,7 +15,8 @@
     width: 330px;
     margin: 0 auto;
     text-align: left;
-    margin-bottom: 48px;
+    margin-bottom: 10px;
+    flex-shrink: 0; /* Не даем тексту сжаться */
   }
 
   &__optionsi {
@@ -24,22 +24,20 @@
     justify-content: center;
     gap: 48px;
     flex-wrap: wrap;
+    margin-bottom: 20px; /* Отступ снизу для лучшего расположения */
+    flex-grow: 1; /* Позволяет этому блоку растягиваться */
   }
 
   &__optioni {
     border-radius: 51px;
     width: 251px;
     height: 238px;
-    // width: 150px;
-    // height: 150px;
     background-size: cover;
     background-position: center;
-    // border: 3px solid transparent;
     cursor: pointer;
-    transition:
-      transform 0.3s ease,
-      border 0.3s ease;
-
+    transition: transform 0.3s ease, border 0.3s ease;
+    flex-shrink: 0; /* Не сжимаем элементы */
+    
     &:hover {
       transform: scale(1.05);
     }
@@ -51,23 +49,24 @@
   }
 
   @media (max-width: 991px) {
-    &__option {
+    &__optioni {
+      width: 150px; /* Увеличиваем размер, если нужно, для меньших экранов */
+      height: 150px;
+    }
+  }
+
+  @media (max-width: 767px) {
+    &__optioni {
       width: 120px;
       height: 120px;
     }
   }
 
-  @media (max-width: 767px) {
-    &__option {
+  @media (max-width: 478px) {
+    &__optioni {
       width: 100px;
       height: 100px;
     }
   }
-
-  @media (max-width: 478px) {
-    &__option {
-      width: 80px;
-      height: 80px;
-    }
-  }
 }
+
