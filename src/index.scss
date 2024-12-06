@@ -21,6 +21,21 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
+html,
+body {
+  overscroll-behavior-y: contain; /* Предотвращает перетягивание на iOS */
+  height: -webkit-fill-available;
+  min-height: 100%;
+}
+
+html {
+  overflow: hidden;
+}
+
+body::-webkit-scrollbar {
+  display: none; /* Скрыть скроллбар в Webkit (например, Safari, Chrome) */
+}
+
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
