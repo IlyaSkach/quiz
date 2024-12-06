@@ -42,6 +42,7 @@
       line-height: 24px;
       color: #fff;
       margin-right: 20px;
+      flex-shrink: 0; /* Предотвращает сжатие круга */
     }
 
     .optiontd {

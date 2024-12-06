@@ -8,7 +8,11 @@ const SingleChoiceQuestion = ({ question, onAnswer }) => {
       <p className="text">Выберите вариант:</p>
       <div className="optionssg">
         {question.options.map((option, index) => (
-          <div key={index} className="optionsg" onClick={() => onAnswer(index)}>
+          <div
+            key={index}
+            className="optionsg"
+            onClick={() => onAnswer(question.id, index)} // Передаем id вопроса и индекс варианта
+          >
             <div className="circlesg">{index + 1}</div>
             {option}
           </div>
@@ -19,3 +23,4 @@ const SingleChoiceQuestion = ({ question, onAnswer }) => {
 };
 
 export default SingleChoiceQuestion;
+

@@ -6,14 +6,14 @@ const MultiChoiceQuestion = ({ question, onAnswer }) => {
 
   const toggleOption = (index) => {
     if (selected.includes(index)) {
-      setSelected(selected.filter((i) => i !== index));
+      setSelected(selected.filter((i) => i !== index)); // Убираем, если уже выбран
     } else {
-      setSelected([...selected, index]);
+      setSelected([...selected, index]); // Добавляем в массив выбранных
     }
   };
 
   const handleSubmit = () => {
-    onAnswer(selected);
+    onAnswer(question.id, selected); // Передаем id вопроса и выбранные индексы
   };
 
   return (
@@ -25,8 +25,8 @@ const MultiChoiceQuestion = ({ question, onAnswer }) => {
           <label key={index} className="optionml">
             <input
               type="checkbox"
-              checked={selected.includes(index)}
-              onChange={() => toggleOption(index)}
+              checked={selected.includes(index)} // Отображаем, если индекс выбран
+              onChange={() => toggleOption(index)} // Обработчик изменения
             />
             <span className="custom-checkbox"></span>
             <span className="option-text">{option}</span>
@@ -53,9 +53,9 @@ const MultiChoiceQuestion = ({ question, onAnswer }) => {
           <path
             d="M10.9774 20.0019L29.0225 20.0019M29.0225 20.0019L21.8045 27.2199M29.0225 20.0019L21.8045 12.7838"
             stroke="#E0EFFF"
-            stroke-width="3"
-            stroke-linecap="round"
-            stroke-linejoin="round"
+            strokeWidth="3"
+            strokeLinecap="round"
+            strokeLinejoin="round"
           />
         </svg>
       </button>
@@ -64,3 +64,4 @@ const MultiChoiceQuestion = ({ question, onAnswer }) => {
 };
 
 export default MultiChoiceQuestion;
+
