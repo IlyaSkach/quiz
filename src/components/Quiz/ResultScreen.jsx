@@ -28,7 +28,6 @@ import "./ResultScreen.scss";
 
 // import CupSvg from './cup.svg'
 import { ReactComponent as CupSvg } from "./cup.svg";
-import { ReactComponent as MissSvg } from "./one.svg";
 
 const ResultScreen = ({ answers, questions }) => {
   const correctAnswersCount = questions.reduce((count, question) => {
