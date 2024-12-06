@@ -6,6 +6,7 @@
   height: 100vh; /* Занимаем всю высоту экрана */
   padding: 0 20px; /* Отступы для мобильных устройств */
   box-sizing: border-box; /* Учитываем отступы в расчет размеров */
+  justify-content: flex-start;
 
   .match-question__text {
     font-family: "Montserrat", sans-serif;
@@ -23,7 +24,7 @@
     flex-direction: column;
     align-items: center;
     width: 100%; /* Занимаем всю ширину */
-    flex-grow: 1; /* Это позволяет элементам занимать оставшееся пространство */
+    // flex-grow: 1; /* Это позволяет элементам занимать оставшееся пространство */
     justify-content: space-evenly; /* Распределяем элементы равномерно по вертикали */
   }
 
