@@ -5,7 +5,7 @@ const StartScreen = ({ onStart }) => {
   return (
     <div className="start-screen">
       <h1 className="start-screen__title">
-        Кто ты <br></br> в медиа?
+        Кто ты <br></br> в медиа???
       </h1>
       <button className="start-screen__button" onClick={onStart}>
         Начать{" "}
