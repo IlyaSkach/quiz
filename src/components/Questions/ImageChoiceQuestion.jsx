@@ -14,11 +14,11 @@ const ImageChoiceQuestion = ({ question, onAnswer }) => {
   return (
     <div className="image-choice-question">
       <h2 className="image-choice-question__text">{question.text}</h2>
-      <div className="image-choice-question__options">
+      <div className="image-choice-question__optionsi">
         {question.options.map((image, index) => (
           <div
             key={index}
-            className={`image-choice-question__option ${
+            className={`image-choice-question__optioni ${
               selectedImage === index ? "selected" : ""
             }`}
             onClick={() => handleImageClick(index)}
